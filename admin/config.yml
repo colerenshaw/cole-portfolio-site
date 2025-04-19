@@ -1,4 +1,3 @@
-
 backend:
   name: git-gateway
   branch: main
@@ -7,35 +6,6 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "projects"
-    label: "Video Projects"
-    folder: "projects"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Video Link", name: "video", widget: "string" }
-
-  - name: "color_grading"
-    label: "Color Grading"
-    folder: "grading"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "RAW Image", name: "raw", widget: "image" }
-      - { label: "GRADED Image", name: "graded", widget: "image" }
-
-  - name: "photos"
-    label: "Photo Gallery"
-    folder: "photos"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title (optional)", name: "title", widget: "string", required: false }
-      - { label: "Images", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
-
   - name: "home"
     label: "Home Page"
     files:
@@ -47,3 +17,29 @@ collections:
           - { label: "Reel Video Link", name: "reel", widget: "string" }
           - { label: "Footer Email", name: "email", widget: "string" }
           - { label: "Footer Phone", name: "phone", widget: "string" }
+  - name: "projects"
+    label: "Video Projects"
+    folder: "projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Video Link", name: "video", widget: "string" }
+  - name: "color_grading"
+    label: "Color Grading"
+    folder: "grading"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "RAW Image", name: "raw", widget: "image" }
+      - { label: "GRADED Image", name: "graded", widget: "image" }
+  - name: "photos"
+    label: "Photo Gallery"
+    folder: "photos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title (optional)", name: "title", widget: "string", required: false }
+      - { label: "Images", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
